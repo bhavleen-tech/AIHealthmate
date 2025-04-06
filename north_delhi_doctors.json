@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Dr. Ramesh Gupta",
+      "specialization": "Cardiologist",
+      "hospital": "North Delhi Heart Institute",
+      "contact": "+91-9876543210",
+      "location": "Ashok Vihar, Delhi"
+    },
+    {
+      "name": "Dr. Sunita Sharma",
+      "specialization": "Gynecologist",
+      "hospital": "City Hospital",
+      "contact": "+91-9812345678",
+      "location": "Model Town, Delhi"
+    }
+  ]
+  

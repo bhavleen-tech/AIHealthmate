@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0fdf4;
+        color: #333;
+    }
+
+    .navigation {
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .lowernav h1 {
+        font-size: 1.8rem;
+        color: #005f73;
+        font-weight: 600;
+        font-style: italic;
+        padding: 10px 0;
+        border-top: 1px solid #b7e4c7;
+        border-bottom: 1px solid #b7e4c7;
+        margin-top: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .articleSection {
+        padding: 40px 20px;
+    }
+
+    .articleContainer {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .article {
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(32, 201, 151, 0.15);
+        padding: 25px 20px;
+        width: 280px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-left: 5px solid #20c997;
+    }
+
+    .article:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 24px rgba(0, 95, 115, 0.2);
+    }
+
+    .articleUpper h2 {
+        font-size: 1.4rem;
+        color: #20c997;
+        margin-bottom: 10px;
+    }
+
+    .articleUpper p {
+        margin: 6px 0;
+        font-size: 0.95rem;
+        color: #444;
+    }
+
+    .planCardLower h4 {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #007f5f;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .lowernav h1 {
+            font-size: 1.3rem;
+            padding: 8px;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .article {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navigation">
+        <img class="logo" src="logo.png" alt="">
+        <div class="lowernav">
+            <h1>Trusted by doctors. Followed by us.</h1>
+        </div>
+    </nav>
+    
+    <section class="articleSection">
+        <div class="articleContainer">
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Smile Makeover</h2>
+                    <img class="logo" src="smile.jpg" alt="">
+                    <p>Veneers are custom shells that enhance the appearance of teeth, offering a confident smile makeover.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr.Kamal Kiswani, Dentist</h4>
+                </div>
+            </div>
+
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Erase the Past: Rejuvenate Your Skin</h2>
+                    <img class="logo" src="laser.jpg" alt="">
+                    <p>Wish to turn back time on your scars? Microneedling is the answer you need</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr.Pradnya Shastri, Dermatologist</h4>
+                </div>
+            </div>
+
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Ayurvedic drinks for all seasons</h2>
+                    <img class="logo" src="ayurveda.jpg" alt="">
+                    <p>Ayurvedic mocktails, or kadhas, help balance doshas and prevent seasonal ailments while boosting digestion and immunity.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Akshay Kumar, Ayurveda</h4>
+                </div>
+            </div>
+
+            <!-- New 6 articles -->
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Boost Metabolism Naturally</h2>
+                    <img class="logo" src="metabolism.jpg" alt="">
+                    <p>Start your day with warm lemon water, ginger, and honey to naturally boost metabolism and aid weight loss.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Meera Bansal, Wellness Coach</h4>
+                </div>
+            </div>
+
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Herbal Detox Water</h2>
+                    <img class="logo" src="detox.jpg" alt="">
+                    <p>Mix cucumber, mint, tulsi, and lemon in water for a refreshing detox that cleanses and hydrates your body.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Raghav Sharma, Naturopath</h4>
+                </div>
+            </div>
+
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Spices to Combat Cold</h2>
+                    <img class="logo" src="cold.jpg" alt="">
+                    <p>A mix of tulsi, dry ginger, black pepper, and clove in hot water is effective against cough and cold symptoms.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Anjali Joshi, Ayurveda Expert</h4>
+                </div>
+            </div>
+
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Golden Milk for Immunity</h2>
+                    <img class="logo" src="haldi.jpg" alt="">
+                    <p>Haldi doodh (turmeric milk) with black pepper and honey strengthens immunity and reduces inflammation naturally.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Vivek Nanda, Holistic Doctor</h4>
+                </div>
+            </div>
+
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Cooling Drink for Summer</h2>
+                    <img class="logo" src="suf.jpg" alt="">
+                    <p>Fennel seed water with rose petals and cardamom cools the body and supports digestion during hot months.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Sneha Kulkarni, Ayurvedic Physician</h4>
+                </div>
+            </div>
+
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Stress-Relief Herbal Tea</h2>
+                    <img class="logo" src="chai.jpg" alt="">
+                    <p>A blend of ashwagandha, chamomile, and licorice helps calm the nerves and promote restful sleep.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Rajeev Menon, Mind-Body Expert</h4>
+                </div>
+            </div>
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Immunity Booster Kadha</h2>
+                    <img class="logo" src="kada.jpg" alt="">
+                    <p>Boil tulsi, cinnamon, black pepper, ginger, and raisins in water — a classic kadha to build immunity and fight infections.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Varun Shetty, Ayurvedic Consultant</h4>
+                </div>
+            </div>
+            
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Morning Detox Routine</h2>
+                    <img class="logo" src="jeera.jpg" alt="">
+                    <p>Start your day with jeera water on an empty stomach to cleanse the digestive system and enhance fat metabolism.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Nidhi Sharma, Holistic Nutritionist</h4>
+                </div>
+            </div>
+            
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Triphala Tonic Benefits</h2>
+                    <img class="logo" src="tri.jpg" alt="">
+                    <p>Triphala acts as a gentle detoxifier that improves digestion, vision, and skin clarity when taken regularly at night.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Ashutosh Kale, Ayurvedic Expert</h4>
+                </div>
+            </div>
+            
+            <div class="article article1">
+                <div class="articleUpper">
+                    <h2>Cooling Cumin Drink</h2>
+                    <img class="logo" src="cumin.jpg" alt="">
+                    <p>Cumin (jeera) water with a dash of lemon and honey is ideal for summer—it cools the system and improves gut health.</p>
+                </div>
+                <div class="planCardLower">
+                    <h4>Dr. Swati Mehra, Ayurveda Consultant</h4>
+                </div>
+            </div>
+                   
+        </div>
+    </section>
+</body>
+</html>

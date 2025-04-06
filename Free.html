@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI healthmate</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .navigation {
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        padding: 10px 20px;
+    }
+
+    .uppernav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .uppernavleft img {
+        height: 60px;
+    }
+
+    .uppernavright button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .uppernavright button:hover {
+        background-color: #0056b3;
+    }
+
+    .lowernav {
+        text-align: center;
+        font-style: italic;
+        color: #444;
+        margin-top: 10px;
+    }
+
+    .menu {
+        background: #e3f2fd;
+        padding: 10px 0;
+    }
+
+    .menulist {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 1.1rem;
+    }
+
+    .menulist a {
+        color: #007BFF;
+        font-weight: 600;
+    }
+
+    .menulist a:hover {
+        text-decoration: underline;
+    }
+
+    .wallpaper {
+        position: relative;
+    }
+
+    .pic {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    .image-text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px 30px;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .image-text-box button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #e91e63;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .image-text-box button:hover {
+        background-color: #c2185b;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 20px;
+        background-color: #fff;
+    }
+
+    .first h2 {
+        color: #003366;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .first h3 {
+        margin: 8px 0;
+        font-weight: 500;
+    }
+
+    .second {
+        max-width: 400px;
+        height: auto;
+    }
+
+    .planSection {
+        background: linear-gradient(135deg, #e0f7fa, #ffffff);
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .planSection h2 {
+        font-size: 2.3rem;
+        margin-bottom: 40px;
+        color: #00796b;
+    }
+
+    .plansContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .planCard {
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
+
+    .planCard:hover {
+        transform: translateY(-8px);
+    }
+
+    .planCardUpper, .reasonCardUpper {
+        padding: 30px 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .planCardUpper h2, .reasonCardUpper h2 {
+        font-size: 1.5rem;
+        color: #26a69a;
+    }
+
+    .planCardUpper p, .reasonCardUpper p {
+        margin: 8px 0;
+        font-size: 0.95rem;
+    }
+
+    .planCardLower {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .planCardLower h3 {
+        color: #2e7d32;
+        margin-bottom: 10px;
+    }
+
+    button.premium {
+        background-color: #26a69a;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+    }
+
+    button.premium:hover {
+        background-color: #00796b;
+    }
+
+    .reasonToJoinSection {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .reasonsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .banner {
+        background-color: #134545;
+        padding: 60px 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .intro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin: 30px 0;
+    }
+
+    .intro img {
+        height: 240px;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .names {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 30px;
+    }
+
+    .contact img {
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .menulist {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .first, .second {
+            text-align: center;
+        }
+
+        .names {
+            gap: 20px;
+        }
+
+        .image-text-box {
+            font-size: 1rem;
+            padding: 10px;
+        }
+    }
+
+    .switchpremium {
+            background-color: #26a69a;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        }
+</style>
+
+
+<body>
+    
+        <!--Navigation-->
+        <nav class="navigation">
+            <div class="uppernav">
+                <div class="uppernavleft">
+                    <img class="logo" src="logo.png" alt="">
+                </div>
+                <div class="uppernavright">
+                    <button class="signin"> <a href="signin.html"> Sign In </a> </button>
+                    <button class="login"> <a href="login.html"> Login </a> </button>
+                </div>
+            </div>
+            <div class="lowernav">
+                    <h2 class="quote">"Your Smart Companion for Better Health"</h2>
+            </div>
+        </nav>
+
+        <!--menubar-->
+        <section class="menu">
+            <div class="menulist">
+                <a href="http://127.0.0.5:2000/" >Disease Prediction</a>
+                <a href="http://127.0.0.2:5000/" >Home Remedies</a>
+                <a href="http://127.0.0.4:5000" >Women Section</a>
+                <a href="http://127.0.0.1:3000/articles.html" target="_blank">Articles</a>
+                <a href="http://127.0.0.5:5000" target="_blank">Weekly Record</a>
+
+            </div>
+        </section>
+
+        <!--main-->
+        <main class="wallpaper">
+            <img class="pic" src="wallpaper.webp" alt="">
+            <div class="image-text-box">
+                <p> Fuel Your Health – Discover Essential Vitamins & Minerals!</p>
+                <button onclick="window.location.href='http://127.0.0.1:3000/knowmore.html'">Know More</button>
+            </div>
+        </main>
+
+        <!--section-->
+        <section class="content">
+            <div class="first">
+                <h2>Your data, guarded at every level.<h2>
+                <h3>    -Robust multi-layered security protocols</h3>
+                <h3>    -Redundant and secure data backups</h3>
+                <h3>    -Strict privacy policies to protect your information</h3>
+            </div>
+           
+            <img class="second" src="safety.png" alt="">
+        </section>
+
+        <section class="planSection">
+            <h2 class="text">A plan to suit your needs</h2>
+            <div class="plansContainer">
+                <div class="planCard planCard1">
+                    <div class="reasonCardUpper">
+                        <h2>Basic</h2>
+                        <p>&check; Disease Prediction, Home Remedies</p>
+                        <p>&check; Women Section</p>
+                    </div>
+                    <div class="planCardLower">
+                        <h3>Free</h3>
+                    </div>
+                </div>
+                <div class="planCard planCard3">
+                    <div class="planCardUpper">
+                        <h2>Premium(Monthly)</h2>
+                        <p>&check; Disease Prediction, Home Remedies, Report Analysis</p>
+                        <p>&check; Upgraded Women Section</p>
+                    </div>
+                    <div class="planCardLower">
+                        <h3>199/month</h3>
+                        <button class="premium"> <a href="http://127.0.0.1:3000/monthly.html"> GO PREMIUM </a> </button>
+                    </div>
+                </div>
+                <div class="planCard planCard4">
+                    <div class="planCardUpper">
+                        <h2>Premium(Yearly)</h2>
+                        <p>&check; Disease Prediction, Home Remedies, Report Analysis</p>
+                        <p>&check; Upgraded Women Section</p>
+                    </div>
+                    <div class="planCardLower">
+                        <h3>1999/year</h3>
+                        <button class="premium"> <a href="http://127.0.0.1:3000/payment.html"> GO PREMIUM </a> </button>
+                    </div>
+                </div>
+                <button class="switchpremium"> <a href="http://127.0.0.6:5001"> SWITCH TO PREMIUM </a> </button>
+
+            </div>
+        </section>
+
+        <section class="reasonToJoinSection">
+            <h2 class="text">Reasons to Join</h2>
+            <div class="reasonsContainer">
+                <div class="planCard planCard1">
+                    <div class="reasonCardUpper">
+                        <h2>Instant disease prediction </h2>
+                        <p> based on symptoms and vital signs.</p>
+                    </div>
+                </div>
+                <div class="planCard planCard3">
+                    <div class="reasonCardUpper">
+                        <h2>24/7 accessible  </h2>
+                        <p>support for remote and underserved areas.</p>
+                    </div>
+                </div>
+                <div class="planCard planCard4">
+                    <div class="reasonCardUpper">
+                        <h2>Personalized health insights</h2>
+                        <p>with suggestions and nearby care options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--end-->
+        <section>
+            <div class="banner">
+                <h2 class="name">~ ~AI Heathmate Team ~ ~
+                </h2>
+                <h1 class="team">
+                    <h3>Here is the team of AI Heathmate</h3>
+                </h1>
+                <div class="intro">
+                    <img class="anushka" src="Anushka Tripathi.png" alt="">
+                    <img class="kiratmeet" src="Kiratmeet.png" alt="">
+                    <img class="bhavleen" src="Bhavleen.png" alt="">
+                </div>
+                <div class="names">
+                    <h2 class="one">ANUSHKA TRIPATHI</h2>
+                    <h2 class="two">KIRATMEET SINGH</h2>
+                    <h2 class="three">BHAVLEEN KAUR</h2>
+                </div>
+                <div class="contact">
+                    <img class="log" src="logo.png" alt="">
+                    <h2 class="last2">Email Id : contact@aihealthcare@gmail.com</h2>
+                    
+                </div>
+            </div>
+        </section>
+</body>
+</html>

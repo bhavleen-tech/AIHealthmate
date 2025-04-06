@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Healthmate+</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  background: #f0f2f5;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: rgba(0, 64, 128, 0.95);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.top-section {
+  padding: 25px 20px 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  padding: 14px 20px;
+}
+
+.menu li a {
+  color: #f0f8ff;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* Sign Out */
+.signout {
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signout a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signout a:hover {
+  color: #ff9999;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 260px;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.login-btn {
+  background-color: #004080;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #002f66;
+}
+
+/* Home section */
+.home {
+  padding: 50px;
+}
+
+.home h1 {
+  font-size: 2.6rem;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .home {
+    padding: 30px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="top-section">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Healthmate+</span>
+      </div>
+      <ul class="menu">
+        <li><a href="http://127.0.0.5:2000/" target="_blank">Disease Predictor</a></li>
+        <li><a href="http://127.0.0.2:5000" target="_blank">Home Remedy</a></li>
+        <li><a href="http://127.0.0.4:5000" target="_blank">Women Health</a></li>
+        <li><a href="knowmore.html" target="_blank">Essential Vitamins & Minerals</a></li>
+        <li><a href="http://127.0.0.2:3000/" target="_blank">Report Analyzer</a></li><!--PREMIUM-->
+        <li><a href="http://127.0.0.5:5000" target="_blank">Weekly Record</a></li>
+        <li><a href="https://www.google.com" target="_blank">Infant Care </a></li> <!--THURSDAY-->
+        <li><a href="http://127.0.0.1:3000/appointment/frontend/index.html" target="_blank">Book an Appointment</a></li><!--Premium-->
+        <li><a href="http://127.0.0.1:5000" target="_blank">MindPulse</a></li><!--Premium-->
+        <li><a href="http://127.0.0.1:3000/articles.html" target="_blank">Articles</a></li>
+      </ul>
+    </div>
+    <div class="signout">
+      <a href="#">🔒 Sign Out</a>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <div class="header">
+      <button class="login-btn">Login</button>
+    </div>
+
+    <div class="home">
+      <h1>Your Digital Healthcare Companion</h1>
+      <p>
+        Welcome to <strong>AI Healthmate+</strong> — your all-in-one platform to monitor health, stay informed, and get guidance instantly. Whether you're looking to track your wellness, understand symptoms, manage appointments, or explore natural remedies, we've got you covered. 
+        <br><br>
+        Join thousands of users who trust AI Healthmate+ for better living and proactive care.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

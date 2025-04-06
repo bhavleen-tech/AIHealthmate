@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Healthmate - Payment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .payment-container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .payment-container h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    .plan-info {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .qr-code {
+      margin: 20px 0;
+    }
+
+    .qr-code img {
+      width: 200px;
+      height: 200px;
+      border: 4px solid #e0e0e0;
+      border-radius: 8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .amount {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #26a69a;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00796b;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-container">
+    <h2>AI Healthmate Premium</h2>
+    <p class="plan-info">Upgrade to <strong>Yearly Premium</strong></p>
+
+    <div class="qr-code">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=AIHealthmateDemo" alt="QR Code">
+    </div>
+
+    <div class="amount">₹1999/year</div>
+
+    <select>
+      <option value="">Select Payment Method</option>
+      <option value="upi">UPI</option>
+      <option value="card">Credit/Debit Card</option>
+      <option value="netbanking">Net Banking</option>
+    </select>
+
+    <button onclick="alert('Demo Payment Triggered')">Pay Now</button>
+
+    <p class="note">Note: This is a demo payment page. No real payment will occur.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Growth Companion</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 0 8px;
+    }
+    th, td {
+      white-space: nowrap;
+    }
+    tr {
+      transition: background 0.3s;
+    }
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen text-gray-800">
+  <header class="bg-blue-700 text-white p-5 shadow-lg">
+    <h1 class="text-3xl font-bold text-center">Smart Growth Companion</h1>
+    <p class="text-center text-sm mt-1">Infant & Child Growth Tracker (0–10 years)</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto py-10 px-4">
+    <!-- Child Profile -->
+    <section class="bg-white p-6 rounded-2xl shadow-xl mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Child Profile</h2>
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="Child's Name" class="p-3 border border-blue-300 rounded-xl" />
+        <input type="date" placeholder="Date of Birth" class="p-3 border border-blue-300 rounded-xl" />
+        <select class="p-3 border border-blue-300 rounded-xl">
+          <option>Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <input type="number" placeholder="Weight (kg)" class="p-3 border border-blue-300 rounded-xl" />
+        <input type="number" placeholder="Height (cm)" class="p-3 border border-blue-300 rounded-xl" />
+      </form>
+    </section>
+
+    <!-- Vaccine Tracker -->
+    <section class="bg-white p-6 rounded-2xl shadow-xl mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">Vaccine Tracker</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr class="bg-blue-200 text-blue-900">
+              <th class="p-3 text-left">Vaccine</th>
+              <th class="p-3 text-left">Age</th>
+              <th class="p-3 text-left">Price (₹)</th>
+              <th class="p-3 text-left">Taken?</th>
+              <th class="p-3 text-left">Date Taken</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="bg-white">
+              <td class="p-3">BCG</td>
+              <td class="p-3">At Birth</td>
+              <td class="p-3">Free - 500</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">OPV-0</td>
+              <td class="p-3">At Birth</td>
+              <td class="p-3">Free</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">Hepatitis B-1</td>
+              <td class="p-3">At Birth</td>
+              <td class="p-3">Free - 300</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">DPT-1, IPV-1, Hib-1</td>
+              <td class="p-3">6 Weeks</td>
+              <td class="p-3">Free - 1000</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">DPT-2, IPV-2, Hib-2</td>
+              <td class="p-3">10 Weeks</td>
+              <td class="p-3">Free - 1000</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">DPT-3, IPV-3, Hib-3</td>
+              <td class="p-3">14 Weeks</td>
+              <td class="p-3">Free - 1000</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">Measles-1 / MMR</td>
+              <td class="p-3">9 Months</td>
+              <td class="p-3">Free - 500</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">Vitamin A</td>
+              <td class="p-3">9 Months, then every 6 months</td>
+              <td class="p-3">Free - 50</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">MMR-2</td>
+              <td class="p-3">15 Months</td>
+              <td class="p-3">Free - 500</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">DPT Booster-1</td>
+              <td class="p-3">16–24 Months</td>
+              <td class="p-3">Free - 800</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">OPV Booster</td>
+              <td class="p-3">16–24 Months</td>
+              <td class="p-3">Free</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">Typhoid Conjugate</td>
+              <td class="p-3">2 Years</td>
+              <td class="p-3">200 - 800</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">DPT Booster-2</td>
+              <td class="p-3">5 Years</td>
+              <td class="p-3">Free - 800</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3">Tdap / TT</td>
+              <td class="p-3">10 Years</td>
+              <td class="p-3">Free - 500</td>
+              <td class="p-3"><input type="checkbox" /></td>
+              <td class="p-3"><input type="date" class="border p-2 rounded" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Remaining sections will stay as-is -->
+  </main>
+
+  <footer class="bg-blue-700 text-white text-center p-4 mt-8 rounded-t-xl shadow-md">
+    &copy; 2025 Smart Growth Companion | Built with ❤️ for Healthy Futures
+  </footer>
+</body>
+</html>
