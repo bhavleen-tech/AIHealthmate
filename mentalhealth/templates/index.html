@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Mental Health Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🧠 Mental Health Risk Assessment</h2>
+        <form action="/predict" method="POST">
+            <label for="mood">Mood Level (1-10):</label>
+            <input type="number" name="mood" min="1" max="10" required>
+
+            <label for="sleep_hours">Sleep Hours:</label>
+            <input type="number" name="sleep_hours" min="0" max="24" required>
+
+            <label for="journal">Journal Entry:</label>
+            <textarea name="journal" rows="4" placeholder="How are you feeling today?" required></textarea>
+
+            <button type="submit">Check Mental Health</button>
+        </form>
+    </div>
+</body>
+</html>
